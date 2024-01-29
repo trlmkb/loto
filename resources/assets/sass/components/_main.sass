@@ -1,0 +1,16 @@
+.Main--global
+  width: 100%
+  max-width: $container
+  margin-right: auto
+  margin-left: auto
+  margin-bottom: $spacer
+
+.Main-inner
+  position: relative
+  border: 2px dashed $clr-main
+  padding: .2rem
+  border-radius: .5rem
+  +clearfix
+
+  +smallerThan($breakpoint)
+    border-width: 0

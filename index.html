@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vikingu logo</title>
+  <link rel="stylesheet" href="public/css/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="Page">
+  <div class="Page-wrap">
+    <header class="Header Header--global">
+      <div class="Header-inner">
+        <div class="Logo"><img src="public/images/logo.png" alt=""></div>
+        <div class="Header-slogan">
+          <div class="Header-sloganTop">
+            Laimėk kelionę vikingų keliais
+          </div>
+          <div class="Header-sloganBottom">
+            Viskas Įskaičiuota
+          </div>
+        </div>
+        <div class="Timer js-timer">
+          <input type="hidden" id="game_time" value="1489304700000">
+          <span id="time">001132</span>
+          <div class="Timer-header">Iki tiražo liko</div>
+          <div class="Timer-footer">
+            <div class="Timer-days">
+              <span class="days"></span> d.
+            </div>
+            <div class="Timer-hours">
+              <span class="hours"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="Main Main--global">
+      <div class="Main-inner">
+        <div class="Map">
+          <div class="Map-anchor Map-anchor--lithuania"><img src="public/images/map-anchor--lithuania.png" alt=""></div>
+          <div class="Map-anchor Map-anchor--estonia"><img src="public/images/map-anchor--estonia.png" alt=""></div>
+          <div class="Map-anchor Map-anchor--sweden"><img src="public/images/map-anchor--sweden.png" alt=""></div>
+          <div class="Map-anchor Map-anchor--norway"><img src="public/images/map-anchor--norway.png" alt=""></div>
+          <a href="https://perku.perlas.lt/lt/vikingloto/?utm_source=vl_lp&utm_medium=vl_lp&utm_campaign=vl_lp_zaisti" target="_blank" class="Button Button--play">Žaisti</a>
+        </div>
+
+        <div class="Slider">
+          <div class="Slider-nav">
+            <div class="Slider-navTitle">
+              Tavo kelionės maršrutas dienomis:
+            </div>
+            <div class="Slider-navDays" id="slider-pager">
+              <a data-slide-index="0" href="" class="Slider-navDay Slider-navDay--info">i</a>
+              <a data-slide-index="1" href="" class="Slider-navDay">1</a>
+              <a data-slide-index="2" href="" class="Slider-navDay">2</a>
+              <a data-slide-index="3" href="" class="Slider-navDay">3</a>
+              <a data-slide-index="4" href="" class="Slider-navDay">4</a>
+              <a data-slide-index="5" href="" class="Slider-navDay">5</a>
+              <a data-slide-index="6" href="" class="Slider-navDay">6</a>
+            </div>
+          </div>
+
+          <ul class="Slider-content js-slider-content">
+
+            <li class="Slider-item Event Event--info">
+              <img class="Event-mainImage" src="public/images/vk-raudonas.jpg" alt="">
+              <div class="Event-content">
+                <div class="Event-contentInner">
+                  <h3>Po Kelionę kas savaitę</h3>
+                  <p>Pirk „Vikingų loto“ bilietą nuo <strong>kovo 9</strong> iki <strong>balandžio 5 d.</strong> ir kas savaitę laimėk kelionę dviems po vikingų kraštus.</p>
+                  <hr>
+                  <h3>Rūpintis niekuo nereikės</h3>
+                  <p>Kelionės bilietai, viešbučiai, restoranai, muziejai, asmeninis gidas ir net taksi...</p>
+                  <p class="Text--center">
+                    <img src="public/images/icons.png" alt="">
+                  </p>
+                  <hr>
+                  <p class="Event-organizer">
+                    Kelionę organizuoja
+                    <img src="public/images/logo--makalius.png" alt="">
+                  </p>
+                  <hr>
+                </div>
+              </div>
+              <div class="Slider-itemActions">
+                <a href="https://perku.perlas.lt/lt/news/laimekite-kelione-dviems-po-vikingu-krastus/?utm_source=vl_lp&utm_medium=vl_lp&utm_campaign=vl_keliones_aprasymas" target="_blank" class="Button">Kelionės aprašymas</a>
+                <!-- <a href="" class="Button Button--alt">Laimėtojai</a> -->
+              </div>
+            </li>
+
+            <li class="Slider-item Event">
+              <img class="Event-mainImage" src="public/images/1diena.jpg" alt="">
+              <div class="Event-day">1 diena</div>
+              <div class="Event-content">
+                <div class="Event-contentInner">
+                  <h2>Estija - Švedija</h2>
+                  <hr>
+                  <p class="Text--center">
+                    <img src="public/images/icon--plane.png" alt="">
+                  </p>
+                  <p>Pakilę iš Vilniaus oro uosto, nusileisite Taline. </p>
+                  <hr>
+                  <p class="Text--center">
+                    <img src="public/images/icon--taxi.png" alt=""> <img src="public/images/icon--museum.png" alt="">
+                  </p>
+                  <p>Čia Jūsų lauks pasivaikčiojimas senamiesčiu, kurio metu apžiūrėsite Kadriogos rūmus, Tompea pilį, Domo katedrą ir kitas Estijos sostinės architektūros grožybes.</p>
+                  <hr>
+                  <p class="Text--center">
+                    <img src="public/images/icon--cruise.png" alt=""> <img src="public/images/icon--plate.png" alt="">
+                  </p>
+                  <p>Kelionė keltu į Stokholmą. Vakarienė ir pramogos kelte.</p>
+                  <hr>
+                </div>
+              </div>
+              <div class="Slider-itemActions">
+                <a href="" data-go-to-slide="0" class="Button">< informacija</a>
+                <a href="" data-go-to-slide="2" class="Button">antra diena ></a>
+              </div>
+            </li>
+
+            <li class="Slider-item Event">
+              <img class="Event-mainImage" src="public/images/2diena.jpg" alt="">
+              <div class="Event-day">2 diena</div>
+              <div class="Event-content">
+                <div class="Event-contentInner">
+                  <h2>Estija - Švedija</h2>
+                  <hr>
+                  <p class="Text--center">
+                    <img src="public/images/icon--plate.png" alt=""> <img src="public/images/icon--cruise.png" alt=""> <img src="public/images/icon--hotel.png" alt="">
+                  </p>
+                  <p>Pusryčiai kelte, atvykę į Stokholmą, įsikursite viešbutyje. </p>
+                  <hr>
+                  <p class="Text--center">
+                    <img src="public/images/icon--taxi.png" alt=""> <img src="public/images/icon--museum.png" alt="">
+                  </p>
+                  <p>Aplankysite miesto Rotušę, kur po Nobelių teikimo ceremonijų vyksta pobūviai.</p>
+                  <hr>
+                  <p class="Text--center">
+                    <img src="public/images/icon--plate.png" alt=""> <img src="public/images/icon--ship.png" alt=""> <img src="public/images/icon--hotel.png" alt="">
+                  </p>
+                  <p>Pietūs mieste, kelionė laiveliu į šiaurės Versaliu vadinamus Drottningholmo rūmus Lovön saloje. Nakvynė viešbutyje. </p>
+                  <hr>
+                </div>
+              </div>
+              <div class="Slider-itemActions">
+                <a href="" data-go-to-slide="1" class="Button">< pirma diena</a>
+                <a href="" data-go-to-slide="3" class="Button">trečia diena ></a>
+              </div>
+            </li>
+
+            <li class="Slider-item Event">
+              <img class="Event-mainImage" src="public/images/3diena.jpg" alt="">
+              <div class="Event-day">3 diena</div>
+              <div class="Event-content">
+                <div class="Event-contentInner">
+                  <h2>Švedija - Norvegija</h2>
+                  <hr>
+                  <p class="Text--center">
+                    <img src="public/images/icon--museum.png" alt="">
+                  </p>
+                  <p>Pusryčiai viešbutyje. Apžiūrėję Vaza muziejų ir pasigrožėję Stokholmo senamiesčiu, trauksite į oro uostą.</p>
+                  <hr>
+                  <p class="Text--center">
+                    <img src="public/images/icon--plate.png" alt=""> <img src="public/images/icon--taxi.png" alt=""> <img src="public/images/icon--hotel.png" alt="">
+                  </p>
+                  <p>Iš jo skrisite į Bergeną Norvegijoje. Įsikursite viešbutyje.</p>
+                  <hr>
+                  <p class="Text--center">
+                    <img src="public/images/icon--plate.png" alt=""> <img src="public/images/icon--hotel.png" alt="">
+                  </p>
+                  <p>Per likusią dieną apžiūrėsite visas šio miesto įžymybes bei pasigrožėsite fiordų vaizdais. Nakvynė viešbutyje. </p>
+                  <hr>
+                </div>
+              </div>
+              <div class="Slider-itemActions">
+                <a href="" data-go-to-slide="2" class="Button">< antra diena</a>
+                <a href="" data-go-to-slide="4" class="Button">ketvirta diena ></a>
+              </div>
+            </li>
+
+            <li class="Slider-item Event">
+              <img class="Event-mainImage" src="public/images/4diena.jpg" alt="">
+              <div class="Event-day">4 diena</div>
+              <div class="Event-content">
+                <div class="Event-contentInner">
+                  <h2>Norvegija</h2>
+                  <hr>
+                  <p class="Text--center">
+                    <img src="public/images/icon--taxi.png" alt=""> <img src="public/images/icon--mountains.png" alt="">
+                  </p>
+                  <p>Vyksite Atlanto kelio link. Jūsų lauks kvapą gniaužianti Norvegijos gamta su fiordais ir Tvindefossen kriokliu bei įdomios gidės istorijos apie šalies istoriją, kultūrą ir šalies gyventojus. Be abejo, išgirsite šį bei tą ir apie vikingus! </p>
+                  <hr>
+                  <p class="Text--center">
+                    <img src="public/images/icon--plate.png" alt=""> <img src="public/images/icon--mountains.png" alt=""> <img src="public/images/icon--hotel.png" alt="">
+                  </p>
+                  <p>Pietūs ir įkvepiantis laikas žavingųjų fiordų apsuptyje. Nakvynė viešbutyje Moldės mieste.</p>
+                  <hr>
+                </div>
+              </div>
+              <div class="Slider-itemActions">
+                <a href="" data-go-to-slide="3" class="Button">< trečia diena</a>
+                <a href="" data-go-to-slide="5" class="Button">penkta diena ></a>
+              </div>
+            </li>
+
+            <li class="Slider-item Event Event--5">
+              <img class="Event-mainImage" src="public/images/5diena.jpg" alt="">
+              <div class="Event-day">5 diena</div>
+              <div class="Event-content">
+                <div class="Event-contentInner">
+                  <h2>Norvegija</h2>
+                  <hr>
+                  <p class="Text--center">
+                    <img src="public/images/icon--taxi.png" alt=""> <img src="public/images/icon--mountains.png" alt="">
+                  </p>
+                  <p>Keliausite Atlanto keliu – vienu vaizdingiausių maršrutų visoje Norvegijoje. Jūsų lauks neįtikėtini vaizdai, įspūdingos salos ir net 7 tiltai. Garsiausias iš jų – Storseisunden – yra tarsi viso kelio vizitinė kortelė.</p>
+                  <hr>
+                  <p class="Text--center">
+                    <img src="public/images/icon--taxi.png" alt=""> <img src="public/images/icon--museum.png" alt="">
+                  </p>
+                  <p>Kelionė į Oslą su pietumis. Įsikursite viešbutyje.</p>
+                  <hr>
+                </div>
+              </div>
+              <div class="Slider-itemActions">
+                <a href="" data-go-to-slide="4" class="Button">< ketvirta diena</a>
+                <a href="" data-go-to-slide="6" class="Button">šešta diena ></a>
+              </div>
+            </li>
+
+            <li class="Slider-item Event">
+              <img class="Event-mainImage" src="public/images/6diena.jpg" alt="">
+              <div class="Event-day">6 diena</div>
+              <div class="Event-content">
+                <div class="Event-contentInner">
+                  <h2>Norvegija - Lietuva</h2>
+                  <hr>
+                  <p class="Text--center">
+                    <img src="public/images/icon--taxi.png" alt=""> <img src="public/images/icon--museum.png" alt="">
+                  </p>
+                  <p>Leisitės į apžvalginę ekskursiją po Oslą, jos metu susipažinsite su įspūdinga miesto architektūra. </p>
+                  <hr>
+                  <p class="Text--center">
+                    <img src="public/images/icon--plate.png" alt=""> <img src="public/images/icon--taxi.png" alt=""> <img src="public/images/icon--plane.png" alt="">
+                  </p>
+                  <p>Petūs mieste, kelionė į oro uostą, kur Jūsų lauks lėktuvas į Lietuvą.</p>
+                  <hr>
+                </div>
+              </div>
+              <div class="Slider-itemActions">
+                <a href="" data-go-to-slide="5" class="Button">< penkta diena</a>
+                <a href="" data-go-to-slide="0" class="Button">informacija ></a>
+              </div>
+            </li>
+
+   
+          </ul>
+        </div>
+        <div class="Button--playMobile">
+          <a href="https://perku.perlas.lt/lt/vikingloto/?utm_source=vl_lp&utm_medium=vl_lp&utm_campaign=vl_lp_zaisti" target="_blank" class="Button Button--play">Žaisti</a>
+        </div>
+      </div>
+    </div>
+    <footer class="Footer Footer--global">
+      <div class="Footer-inner">
+
+        <div class="vikings-newsletter">
+          <div id="subscribe">
+            <form>
+              <div id="vikings-newsletter-text" class="vikings-newsletter-text">Užsisakyk svarbiausias loterijų naujienas</div>
+              <div class="vikings-newsletter-wrapper">
+                <input type="email" id="email_input" autocomplete="off" required placeholder="El. Pašto adresas" validate="required:true" required>
+                <div id="email_submit">Užsisakyti</div>
+                <div id="email_fail" class="hidden cursor-pointer">Nevalidus formatas</div>
+                <div id="email_success" class="hidden cursor-pointer">Prenumerata sėkminga</div>
+              </div>
+            </form>
+
+          </div>
+          <a class="other-lotteries-link" href="https://perku.perlas.lt/lt/lotteries?utm_source=lp_vikingloto">
+            Kitas perlo loterijas rasite čia >>
+          </a>
+        </div>
+
+      </div>
+    </footer>
+  </div>
+  <script type="text/javascript" src="public/js/vendor/jquery.js"></script>
+  <script type="text/javascript" src="public/js/vendor/countdown.js"></script>
+  <script type="text/javascript" src="public/js/vendor/bx-slider.min.js"></script>
+  <script type="text/javascript" src="public/js/landing.js"></script>
+  <script type="application/javascript">
+    $("#email_submit").on('click', function(e) {
+      $('#email_fail').hide();
+
+      e.preventDefault();
+      var email = $('#email_input').val();
+
+      $.ajax({
+        method: 'POST',
+        url: 'https://perku.perlas.lt/newsletter/newsletter/subscribe',
+        data: {email: email, lottery: 'vikingloto'}
+      }).done(function (data) {
+        if (data.status) {
+          $('#vikings-newsletter-text').hide();
+          $('#email_input').hide();
+          $('#email_submit').hide();
+          $('#email_success').show();
+        } else {
+          $('#vikings-newsletter-text').hide();
+          $('#email_input').hide();
+          $('#email_submit').hide();
+          $('#email_fail').show();
+        }
+      });
+    });
+    $("#email_success").on('click', function(e) {
+      location.reload();
+    });
+    $("#email_fail").on('click', function(e) {
+      $('#vikings-newsletter-text').show();
+      $('#email_input').show();
+      $('#email_input').focus();
+      $('#email_submit').show();
+      $('#email_fail').hide();
+    });
+  </script>
+</body>
+</html>

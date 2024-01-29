@@ -1,0 +1,76 @@
+
+$lightness: 68
+
+=button-color($color, $type: regular, $color--active: false, $second-color--active: false)
+  // Shared States
+  &:hover,
+  &.active,
+  &:active
+    @if $color--active
+      color: $color--active
+    @else
+      @if lightness($color) >= $lightness
+        color: desaturate(darken($color, 50%), 40%)
+      @else
+        color: white
+
+  // If clear
+  @if $type == clear or $type == outline
+    color: $color
+    background-color: rgba($color, 0)
+
+    // States
+    &:hover,
+    &.active,
+    &:active
+      background-color: rgba($color, 0)
+
+      @if lightness($color) >= 50
+        color: darken($color, 10%)
+      @else
+        color: lighten($color, 10%)
+
+    // If outline
+    @if $type == outline
+      box-shadow: inset 0 0 0 1px $color
+
+      // States
+      &:hover,
+      &.active,
+      &:active
+        @if $second-color--active
+          background-color: $second-color--active
+          box-shadow: inset 0 0 0 1px $second-color--active
+        @else
+          background-color: $color
+
+        @if not $color--active
+          @if lightness($color) <= $lightness
+            color: white
+          @else
+            color: desaturate(darken($color, 50%), 40%)
+  @else
+    background-color: $color
+
+    @if lightness($color) >= $lightness
+      color: desaturate(darken($color, 40%), 30%)
+    @else
+      color: white
+
+    // States
+    &:hover,
+    &.active
+      @if $second-color--active
+        background-color: $second-color--active
+      @else
+        @if lightness($color) >= 50
+          background-color: darken($color, 10%)
+        @else
+          background-color: lighten($color, 10%)
+
+//------------------------------------//
+//  Button sizes
+//------------------------------------//
+
+=button-size($size, $fontSize: 1.2rem, $lineHeight: 1.8rem)
+  padding: $size

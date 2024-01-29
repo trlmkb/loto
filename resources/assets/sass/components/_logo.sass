@@ -1,0 +1,28 @@
+.Logo
+  // background-image: url(../images/logo.png)
+  // background-position: center
+  // background-repeat: no-repeat
+  // background-size: 100%
+  display: inline-block
+  vertical-align: top
+  // width: 112px
+  // height: 84px
+  box-shadow: none
+
+  // +retina-mq
+  //   background-image: url(../images/logo--retina.png)
+
+  +smallerThan($breakpoint)
+    flex: 0 1 auto
+    // width: 137px
+    // height: 105px
+    // background-size: 100%
+    -webkit-box-flex: 0
+    -ms-flex: 0 1 auto
+    flex: 0 1 auto
+    -ms-flex-preferred-size: auto
+    flex-basis: auto
+    -ms-flex-positive: 0
+    flex-grow: 0
+    -ms-flex-negative: 1
+    flex-shrink: 1

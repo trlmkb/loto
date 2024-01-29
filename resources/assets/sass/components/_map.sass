@@ -1,0 +1,69 @@
+.Map
+  display: inline-block
+  vertical-align: top
+  width: 735px
+  height: 584px
+  float: right
+  background-image: url(../images/map.png)
+  background-position: center
+  background-repeat: no-repeat
+  background-size: 735px 584px
+
+  +retina-mq
+    background-image: url(../images/map--retina.png)
+
+  +smallerThan($breakpoint)
+    position: relative
+    display: block
+    height: 0
+    width: 100%
+    padding-top: 62.311558%
+    background-size: 100%
+    border: 2px dashed $clr-main
+    border-radius: .5rem
+    margin-bottom: $spacer/2
+    background-image: url(../images/map--mobile.png)
+
+    +retina-mq
+      background-image: url(../images/map--mobile--retina.png)
+
+.Map-anchor
+  position: absolute
+  transform-origin: right bottom
+  animation-name: mapAnchorScale
+  animation-duration: 20s
+  animation-timing-function: ease-in-out
+  animation-timing-function: $ease-out-back
+  animation-fill-mode: both
+  animation-iteration-count: infinite
+
+  +smallerThan($breakpoint)
+    display: none
+
+.Map-anchor--lithuania
+  left: 718px
+  top: 400px
+  animation-delay: 5s
+
+
+.Map-anchor--estonia
+  left: 703px
+  top: 233px
+  animation-delay: 7s
+
+.Map-anchor--sweden
+  left: 560px
+  top: 257px
+  animation-delay: 9s
+
+.Map-anchor--norway
+  left: 331px
+  top: 203px
+  animation-delay: 11s
+
+
+@keyframes mapAnchorScale
+  0%, 4%
+    transform: scale(1)
+  2%
+    transform: scale(1.25)

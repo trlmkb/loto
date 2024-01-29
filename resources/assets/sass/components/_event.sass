@@ -1,0 +1,97 @@
+.Event-organizer
+  +clearfix
+  line-height: 41px !important
+
+  img
+    float: right
+
+.Event-day
+  position: absolute
+  top: 1rem
+  left: 1rem
+  color: white
+  text-transform: uppercase
+  font-weight: bold
+  font-size: 2.2rem
+  line-height: 1
+  font-style: italic
+
+  .Event--5 &
+    color: #111
+
+
+.Event
+  display: flex
+  flex-flow: column nowrap
+  +smallerThan($breakpoint)
+    display: block
+
+.Event-contentInner
+  padding: $spacer/2 $spacer
+  position: absolute
+  left: 0
+  top: 0
+  height: 100%
+  overflow: auto
+  width: 100%
+  +smallerThan($breakpoint)
+    position: static
+
+.Event-content
+  position: relative
+  flex: 1 1 auto
+  
+  h2
+    margin-bottom: 0
+    +adjust-font-size-to(24px)
+    letter-spacing: -.1rem
+    
+  h3
+    margin-bottom: $spacer/4
+    +adjust-font-size-to(16px, 1)
+    text-transform: uppercase
+
+  p
+    font-size: 1.2rem
+    line-height: 1.25
+    margin-bottom: $spacer/2
+    text-align: justify
+
+    &:last-child
+      margin-bottom: 0
+
+  .Button
+    padding: .75rem
+    text-transform: none
+
+  img + img
+    margin-left: .5rem
+
+.Event--info
+  hr
+    margin: 1.75rem 0
+
+  p
+    font-size: 1.4rem
+    line-height: 1.25
+
+    &:last-child
+      margin-bottom: 0
+
+  .Button
+    padding: .5rem
+    text-transform: uppercase
+
+  .Event-mainImage
+    margin-bottom: $spacer/2
+
+
+.Event-mainImage
+  margin: 0
+  border-radius: .75rem
+  flex: 0 0 auto
+  // max-width: 286px
+
+.Event img
+  display: inline-block
+  vertical-align: middle

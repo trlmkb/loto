@@ -1,0 +1,28 @@
+.Header-slogan
+  font-family: $heading-font-family
+  text-transform: uppercase
+  font-weight: bold
+
+  +smallerThan($breakpoint)
+    white-space: nowrap
+    padding-left: $spacer
+  
+.Header-sloganTop
+  margin-top: -.5rem
+  font-size: 3.35rem
+  line-height: 1
+  color: $clr-main
+  letter-spacing: -2px
+
+  +smallerThan($breakpoint)
+    font-size: 3.8vw
+
+
+.Header-sloganBottom
+  margin-top: .5rem
+  +adjust-font-size-to(50px)
+  line-height: 1
+  color: white
+
+  +smallerThan($breakpoint)
+    font-size: 5.6vw

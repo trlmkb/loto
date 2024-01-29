@@ -1,0 +1,15 @@
+.Page
+  background: url(../images/background--desktop.png) transparent center/100% 100% no-repeat
+  height: 100%
+
+  +smallerThan($breakpoint)
+    background: url(../images/background--mobile.jpg) transparent center no-repeat
+    background-size: cover
+
+.Page-wrap
+  max-height: 100%
+  overflow: auto
+
+  +smallerThan($breakpoint)
+    padding-left: $spacer
+    padding-right: $spacer

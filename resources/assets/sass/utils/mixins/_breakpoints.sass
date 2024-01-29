@@ -1,0 +1,20 @@
+
+=smallerThan($at)
+  @media only screen and (max-width: $at)
+    @content
+
+=between($from, $to)
+  @media only screen and (min-width: $from) and (max-width: $to)
+    @content
+
+=biggerThan($at)
+  @media only screen and (min-width: $at)
+    @content
+
+=shorterThan($at)
+  @media only screen and (max-height: $at)
+    @content
+
+=tallerThan($at)
+  @media only screen and (min-height: $at)
+    @content

@@ -1,0 +1,15 @@
+.Header--global
+  width: 100%
+  max-width: $container
+  margin-right: auto
+  margin-left: auto
+
+  .Header-inner
+    padding: $spacer 0
+    display: flex
+    flex-flow: row nowrap
+    align-items: stretch
+    justify-content: space-between
+
+    +smallerThan($breakpoint)
+      align-items: center

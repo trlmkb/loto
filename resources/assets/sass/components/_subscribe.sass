@@ -1,0 +1,74 @@
+.vikings-newsletter
+  display: flex
+  flex-flow: row nowrap
+  align-items: center
+  justify-content: space-between
+  margin-bottom: $spacer
+  padding: $spacer
+  background: rgba(black,.2)
+  color: white
+  
+  +smallerThan($breakpoint)
+    display: none
+    flex-flow: row wrap
+
+  #subscribe
+    flex: 1 1 auto
+
+    +smallerThan($breakpoint)
+      width: 100%
+      margin-bottom: $spacer
+
+  a
+    flex: 0 1 auto
+
+  .other-lotteries-link
+    font-family: $heading-font-family
+    margin-right: $spacer
+    font-weight: bold
+    font-style: italic
+    text-transform: uppercase
+    letter-spacing: -1px
+
+  #email_submit
+    @extend .Button
+    @extend .Button--main
+    font-size: 1.1rem
+    padding: .5rem 1rem
+
+  #email_input
+    border: 0
+    width: 250px
+    background: white
+    padding: .5rem 1.5rem
+    +adjust-font-size-to(12px, 1)
+    font-weight: bold
+    border-radius: .25rem
+    margin-right: $spacer/2
+    color: $clr-text
+
+    +placeholder
+      color: $clr-text-dimmed
+      +adjust-font-size-to(10px)
+      font-style: italic
+      text-transform: uppercase
+      font-family: $heading-font-family
+
+  
+  .vikings-newsletter-text
+    font-family: $heading-font-family
+    +adjust-font-size-to(16px, 1)
+    font-weight: bold
+    font-style: italic
+    text-transform: uppercase
+    margin-bottom: $spacer/2
+    letter-spacing: -1px
+
+#email_fail
+  color: #ff4040
+
+#email_success
+  color: #7BD389
+#email_fail,
+#email_success
+  margin-top: $spacer/2

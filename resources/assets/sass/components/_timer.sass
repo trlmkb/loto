@@ -1,0 +1,39 @@
+.Timer
+  display: flex
+  flex-flow: column nowrap
+  align-items: center
+  justify-content: center
+  border: 1px dashed white
+  padding: $spacer/2
+  color: white
+  font-weight: bold
+  border-radius: 1rem
+  letter-spacing: -1px
+
+  +smallerThan($breakpoint)
+    display: none
+
+.Timer-header
+  font-size: 1.8rem
+  line-height: 1
+  margin-bottom: .6rem
+  text-transform: uppercase
+
+.Timer-footer
+  font-size: 2rem
+  line-height: 1
+  display: flex
+  width: 100%
+  flex-flow: row nowrap
+  align-items: center
+  justify-content: space-between
+
+.Timer-days,
+.Timer-hours
+  flex: 1 1 auto
+
+.Timer-hours
+  text-align: right
+
+#time
+  display: none

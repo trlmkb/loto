@@ -1,0 +1,54 @@
+//------------------------------------//
+//  Functions
+//------------------------------------//
+
+// Unit striping
+
+@function strip-units($number)
+  @return $number / ($number * 0 + 1)
+
+// Deep sass map fetching
+
+@function map-fetch($map, $keys)
+  $key: nth($keys, 1)
+  $length: length($keys)
+  $value: map-get($map, $key)
+
+  @if $length > 1
+    $rest: ()
+
+    @for $i from 2 through $length
+      $rest: append($rest, nth($keys, $i))
+
+    @return map-fetch($value, $rest)
+  @else
+    @return $value
+
+@function top-shadow($depth)
+  $primary-offset: nth(1.5 3 10 14 19, $depth) * 1px
+  $blur: nth(1.5 3 10 14 19, $depth) * 4px
+  $color: rgba(black, nth(0.12 0.16 0.19 0.25 0.3, $depth))
+
+  @return 0 $primary-offset $blur $color
+
+@function bottom-shadow($depth)
+  $primary-offset: nth(1.5 3 6 10 15, $depth) * 1px
+  $blur: nth(1 3 3 5 6, $depth) * 4px
+  $color: rgba(black, nth(0.24 0.23 0.23 0.22 0.22, $depth))
+
+  @return 0 $primary-offset $blur $color
+
+
+@function image-size($image, $height: false)
+  @if $height
+    @return image-height($image)
+  @else
+    @return image-width($image)
+
+
+    
+@function vr($lines: 1, $font-size: $base-font-size, $offset: 0)
+  $rhythm: convert-length($lines * $base-line-height - $offset, $rhythm-unit, $font-size)
+  @if unit($rhythm) == px
+    $rhythm: floor($rhythm)
+  @return $rhythm
